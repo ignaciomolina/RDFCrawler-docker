@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ "$URI_CRAWL"  != "" ]
+then
+	HOME=/usr/lib/rdfcrawler
+	$HOME/.env/bin/python $HOME/.env/local/bin/rdf_service.py $URI_CRAWL &
+else 
+	echo -e "You have to define URI_CRAWL environmnet variable"
+fi
